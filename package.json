@@ -1,0 +1,7 @@
+{
+  "name": "scamalytics-simple-hardcoded-key",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple Scamalytics IP checker for Vercel with key in api/config.js.",
+  "engines": { "node": "20.x" }
+}

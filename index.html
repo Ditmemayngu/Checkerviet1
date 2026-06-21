@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scamalytics IP Check</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="header">
+          <div>
+            <p class="eyebrow">Local IP Fraud Checker</p>
+            <h1>Scamalytics IP Check</h1>
+          </div>
+          <button id="checkBtn">Re-check</button>
+        </div>
+
+        <div id="loading" class="status">
+          <div class="spinner"></div>
+          <p>Đang lấy IP và kiểm tra fraud score...</p>
+        </div>
+
+        <div id="errorBox" class="error hidden"></div>
+
+        <div id="resultBox" class="hidden">
+          <div class="result">
+            <div class="item"><span>IP</span><strong id="ip">N/A</strong></div>
+            <div class="item"><span>Fraud Score</span><strong id="fraudScore">N/A</strong></div>
+            <div class="item"><span>Risk Score</span><strong id="riskScore">N/A</strong></div>
+            <div class="item"><span>Country</span><strong id="country">N/A</strong></div>
+          </div>
+
+          <div class="meterCard">
+            <div class="meterTop">
+              <div>
+                <span class="meterTitle">Fraud risk meter</span>
+                <p>0 là sạch hơn, 100 là rủi ro cao hơn.</p>
+              </div>
+              <span id="riskPill" class="riskPill riskUnknown">Unknown Risk</span>
+            </div>
+            <div class="meterGuide"><span>Lowest risk</span><span>Highest risk</span></div>
+            <div class="meterTrack"><div id="meterPointer" class="meterPointer"></div></div>
+            <div class="meterBottom"><span>0</span><strong id="meterScore">Fraud Score: N/A</strong><span>100</span></div>
+          </div>
+
+          <p id="credits" class="credits hidden"></p>
+          <a id="reportLink" class="link hidden" target="_blank" rel="noreferrer">Open Scamalytics report</a>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
